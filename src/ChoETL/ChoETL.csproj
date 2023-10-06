@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A5062F4-B00A-4998-858D-A3C5D99E2074}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChoETL</RootNamespace>
+    <AssemblyName>ChoETL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_DYNAMIC_</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>True</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>True</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>True</CodeContractsRedundantAssumptions>
+    <CodeContractsAssertsToContractsCheckBox>True</CodeContractsAssertsToContractsCheckBox>
+    <CodeContractsRedundantTests>True</CodeContractsRedundantTests>
+    <CodeContractsMissingPublicRequiresAsWarnings>True</CodeContractsMissingPublicRequiresAsWarnings>
+    <CodeContractsMissingPublicEnsuresAsWarnings>False</CodeContractsMissingPublicEnsuresAsWarnings>
+    <CodeContractsInferRequires>True</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferEnsuresAutoProperties>True</CodeContractsInferEnsuresAutoProperties>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestAssumptionsForCallees>False</CodeContractsSuggestAssumptionsForCallees>
+    <CodeContractsSuggestRequires>False</CodeContractsSuggestRequires>
+    <CodeContractsNecessaryEnsures>True</CodeContractsNecessaryEnsures>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsSuggestReadonly>True</CodeContractsSuggestReadonly>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsSQLServerOption />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
+    <CodeContractsSkipAnalysisIfCannotConnectToCache>False</CodeContractsSkipAnalysisIfCannotConnectToCache>
+    <CodeContractsFailBuildOnWarnings>False</CodeContractsFailBuildOnWarnings>
+    <CodeContractsBeingOptimisticOnExternal>True</CodeContractsBeingOptimisticOnExternal>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;_DYNAMIC_</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>ChoETL.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Attributes\ChoAllowMultipleAttribute.cs" />
+    <Compile Include="Common\Attributes\ChoDataTableColumnTypeAttribute.cs" />
+    <Compile Include="Common\Attributes\ChoDictionaryKeyAttribute.cs" />
+    <Compile Include="Common\Attributes\ChoIsNullableAttribute.cs" />
+    <Compile Include="Common\Attributes\ChoFieldPositionAttribute.cs" />
+    <Compile Include="Common\Attributes\ChoKnownTypeAttribute.cs" />
+    <Compile Include="Common\Attributes\ChoSourceTypeAttribute.cs" />
+    <Compile Include="Common\Attributes\ChoMetadataRefTypeAttribute.cs" />
+    <Compile Include="Common\Attributes\ChoFieldMapAttribute.cs" />
+    <Compile Include="Common\Attributes\ChoAssemblyBetaVersionAttribute.cs" />
+    <Compile Include="Common\Attributes\MetadataTypeAttribute.cs" />
+    <Compile Include="Common\ChoAsyncHelper.cs" />
+    <Compile Include="Common\ChoFieldTypeAssessor.cs" />
+    <Compile Include="Common\ChoObjectPool.cs" />
+    <Compile Include="Common\ChoResetLazy.cs" />
+    <Compile Include="Common\ChoTypeComparerCache.cs" />
+    <Compile Include="Common\Collections\ChoOrderedDictionary.cs" />
+    <Compile Include="Common\Collections\ChoSerializableDictionary.cs" />
+    <Compile Include="Common\Converters\ChoCDATAToStringConverter.cs" />
+    <Compile Include="Common\Converters\ChoArrayToObjectConverter.cs" />
+    <Compile Include="Common\Converters\ChoCharConverter.cs" />
+    <Compile Include="Common\Dynamic\ChoAutoConverter.cs" />
+    <Compile Include="Common\Exceptions\ChoSqlBulkCopyException.cs" />
+    <Compile Include="Common\ExtensionMethods\ChoEnumerableEx.cs" />
+    <Compile Include="Common\ExtensionMethods\ChoDateTime.cs" />
+    <Compile Include="Common\ExtensionMethods\Linq\ChoLeftJoin.cs" />
+    <Compile Include="Common\IChoConvertible.cs" />
+    <Compile Include="Common\Xml\ChoXmlConvert.cs" />
+    <Compile Include="Exception\ChoBadDataException.cs" />
+    <Compile Include="File\CSV\ChoCSVLiteWriter.cs" />
+    <Compile Include="File\CSV\ChoCSVLiteReader.cs" />
+    <Compile Include="File\CSV\ChoCSVRecordFieldConfigurationMap.cs" />
+    <Compile Include="File\CSV\ChoCSVRecordTypeConfiguration.cs" />
+    <Compile Include="File\FixedLength\ChoFixedLengthRecordConfigurationMap.cs" />
+    <Compile Include="File\FixedLength\ChoFixedLengthRecordTypeConfiguration.cs" />
+    <Compile Include="File\KeyValue\ChoKVPRecordConfigurationMap.cs" />
+    <Compile Include="File\Manifold\ChoManifoldRecordTypeConfiguration.cs" />
+    <Compile Include="File\TSV\ChoTSVWriter.cs" />
+    <Compile Include="File\TSV\ChoTSVReader.cs" />
+    <Compile Include="File\Xml\ChoXmlArrayAttribute.cs" />
+    <Compile Include="File\Xml\ChoUseXmlSerializationAttribute.cs" />
+    <Compile Include="File\Xml\ChoXmlSerializerProxy.cs" />
+    <Compile Include="File\Xml\ChoXPathAttribute.cs" />
+    <Compile Include="File\Xml\ChoXmlRecordConfigurationMap.cs" />
+    <Compile Include="IChoEmptyLineReportable.cs" />
+    <Compile Include="IChoCustomColumnMappable.cs" />
+    <Compile Include="IChoCustomSerializable.cs" />
+    <Compile Include="IChoKeyValueType.cs" />
+    <Compile Include="ChoScalarObject.cs" />
+    <Compile Include="ChoEnums.cs" />
+    <Compile Include="ChoWriter.cs" />
+    <Compile Include="ChoTextFileExternalSorter.cs" />
+    <Compile Include="Common\Attributes\ChoDefaultValueAttribute.cs" />
+    <Compile Include="Common\Attributes\ChoKeyValueTypeAttribute.cs" />
+    <Compile Include="Common\ChoDisposable.cs" />
+    <Compile Include="Common\ChoEnum.cs" />
+    <Compile Include="Common\ChoEnumTypeCache.cs" />
+    <Compile Include="Common\ChoExternalSorter.cs" />
+    <Compile Include="Common\Compiler\ChoCodeDomProvider.cs" />
+    <Compile Include="Common\ComponentModel\ChoCustomTypeDescriptor.cs" />
+    <Compile Include="Common\ComponentModel\ChoTypeDescriptionProvider.cs" />
+    <Compile Include="Common\Data\Entity\ChoEntityEx.cs" />
+    <Compile Include="Common\Converters\ChoCustomCodeConverter.cs" />
+    <Compile Include="Common\Converters\ChoLowerCaseConverter.cs" />
+    <Compile Include="Common\Converters\ChoUShortConverter.cs" />
+    <Compile Include="Common\Converters\ChoShortConverter.cs" />
+    <Compile Include="Common\Converters\ChoULongConverter.cs" />
+    <Compile Include="Common\Converters\ChoLongConverter.cs" />
+    <Compile Include="Common\Converters\ChoUIntConverter.cs" />
+    <Compile Include="Common\Converters\ChoIntConverter.cs" />
+    <Compile Include="Common\Converters\ChoFloatConverter.cs" />
+    <Compile Include="Common\Converters\ChoDoubleConverter.cs" />
+    <Compile Include="Common\Converters\ChoDecimalConverter.cs" />
+    <Compile Include="Common\Converters\ChoSByteConverter.cs" />
+    <Compile Include="Common\Converters\ChoByteConverter.cs" />
+    <Compile Include="Common\Converters\ChoBooleanConverter.cs" />
+    <Compile Include="Common\Converters\ChoBigIntegerConverter.cs" />
+    <Compile Include="Common\Converters\ChoEnumConverter.cs" />
+    <Compile Include="Common\Data\ChoSqlTableHelper.cs" />
+    <Compile Include="Common\Dynamic\ChoDynamicClassFactory.cs" />
+    <Compile Include="Common\Dynamic\ChoExpandoObjectEx.cs" />
+    <Compile Include="Common\Dynamic\ChoDynamicObject.cs" />
+    <Compile Include="Common\Dynamic\ChoDynamicObjectEqualityComparer.cs" />
+    <Compile Include="Common\ExtensionMethods\ChoBoolean.cs" />
+    <Compile Include="Common\ExtensionMethods\ChoLinqEx.cs" />
+    <Compile Include="Common\Reflection\ChoFieldInfoEx.cs" />
+    <Compile Include="Common\Reflection\ChoMemberInfoEx.cs" />
+    <Compile Include="Common\Reflection\ChoPropertyInfoEx.cs" />
+    <Compile Include="Common\Reflection\Emit\ChoEmitHelper.cs" />
+    <Compile Include="Common\Reflection\Emit\ChoILGeneratorEx.cs" />
+    <Compile Include="Common\Serialization\ChoKeyValuePair.cs" />
+    <Compile Include="Common\Text\RegularExpressions\ChoWildcard.cs" />
+    <Compile Include="Common\Validators\ChoCustomCodeValidatorAttribute.cs" />
+    <Compile Include="Common\Validators\ChoCustomExprValidatorAttribute.cs" />
+    <Compile Include="Common\Xml\ChoCDATA.cs" />
+    <Compile Include="ETLCommon\IChoETLNameableObject.cs" />
+    <Compile Include="File\ChoRecordFieldTypeAssessmentEventArgs.cs" />
+    <Compile Include="File\ChoRowsWrittenEventArgs.cs" />
+    <Compile Include="File\ChoRowsLoadedEventArgs.cs" />
+    <Compile Include="File\CSV\ChoCSVFluentPlugIn.cs" />
+    <Compile Include="ChoReader.cs" />
+    <Compile Include="IChoWriter.cs" />
+    <Compile Include="IChoReader.cs" />
+    <Compile Include="File\FixedLength\ChoFixedLengthFileHeaderConfiguration.cs" />
+    <Compile Include="File\FixedLength\ChoFixedLengthRecordWriter.cs" />
+    <Compile Include="File\FixedLength\ChoFixedLengthWriter.cs" />
+    <Compile Include="File\FixedLength\ChoFixedLengthFileHeaderAttribute.cs" />
+    <Compile Include="File\FixedLength\ChoFixedLengthFieldDefaultSizeConfiguation.cs" />
+    <Compile Include="Common\Converters\ChoTypeConverterFormatSpec.cs" />
+    <Compile Include="ChoRecordWriter.cs" />
+    <Compile Include="ChoRecordReader.cs" />
+    <Compile Include="ChoRecordFieldConfiguration.cs" />
+    <Compile Include="ChoRecordConfiguration.cs" />
+    <Compile Include="ChoObjectAttribute.cs" />
+    <Compile Include="ChoTypeConverter.cs" />
+    <Compile Include="Common\Attributes\ChoFallbackValue.cs" />
+    <Compile Include="Common\Attributes\ChoMemberAttribute.cs" />
+    <Compile Include="Common\Attributes\ChoMemberValueSourceAttribute.cs" />
+    <Compile Include="Common\Attributes\ChoOrderedAttribute.cs" />
+    <Compile Include="Common\Attributes\ChoSequenceGeneratorAttribute.cs" />
+    <Compile Include="Common\Attributes\ChoTypeConverterAttribute.cs" />
+    <Compile Include="Common\Attributes\ChoValidatorAttribute.cs" />
+    <Compile Include="Common\ChoCurrency.cs" />
+    <Compile Include="Common\ChoFuncEx.cs" />
+    <Compile Include="Common\ChoActionEx.cs" />
+    <Compile Include="Common\ChoActivator.cs" />
+    <Compile Include="Common\ChoAppSettings.cs" />
+    <Compile Include="Common\ChoArray.cs" />
+    <Compile Include="Common\ChoAssembly.cs" />
+    <Compile Include="Common\ChoAssemblyResolver.cs" />
+    <Compile Include="Common\ChoBaseProfile.cs" />
+    <Compile Include="Common\ChoBinaryHeap.cs" />
+    <Compile Include="Common\ChoBufferProfile.cs" />
+    <Compile Include="Common\ChoCharEx.cs" />
+    <Compile Include="Common\ChoChunkedEnumerableEx.cs" />
+    <Compile Include="Common\ChoConvert.cs" />
+    <Compile Include="Common\ChoDataReaderExtension.cs" />
+    <Compile Include="Common\ChoDecimalSequenceService.cs" />
+    <Compile Include="Common\ChoDirectory.cs" />
+    <Compile Include="Common\ChoDoubleSequenceService.cs" />
+    <Compile Include="Common\ChoEnumerable.cs" />
+    <Compile Include="Common\ChoEnumeratorWrapper.cs" />
+    <Compile Include="Common\ChoEnvironment.cs" />
+    <Compile Include="Common\ChoEnvironmentVariablePropertyReplacer.cs" />
+    <Compile Include="ETLCommon\ChoETLFramework.cs" />
+    <Compile Include="ETLCommon\ChoETLLog.cs" />
+    <Compile Include="Common\ChoEventArgs.cs" />
+    <Compile Include="Common\ChoException.cs" />
+    <Compile Include="Common\ChoExtensions.cs" />
+    <Compile Include="Common\ChoFile.cs" />
+    <Compile Include="Common\ChoFileStreamWithBackup.cs" />
+    <Compile Include="Common\ChoGlobalDictionaryPropertyReplacer.cs" />
+    <Compile Include="Common\ChoGuard.cs" />
+    <Compile Include="Common\ChoIndexedEnumerator.cs" />
+    <Compile Include="Common\ChoIniFile.cs" />
+    <Compile Include="Common\ChoIntSequenceService.cs" />
+    <Compile Include="Common\ChoIterator.cs" />
+    <Compile Include="Common\ChoMapReduce.cs" />
+    <Compile Include="Common\ChoMomentoObject.cs" />
+    <Compile Include="Common\ChoPath.cs" />
+    <Compile Include="Common\ChoPeekEnumerator.cs" />
+    <Compile Include="Common\ChoPriorityQueue.cs" />
+    <Compile Include="Common\ChoProcess.cs" />
+    <Compile Include="Common\ChoPropertyBag.cs" />
+    <Compile Include="Common\ChoPropertyReplacer.cs" />
+    <Compile Include="Common\ChoQueuedTaskScheduler.cs" />
+    <Compile Include="Common\ChoStringMsgBuilder.cs" />
+    <Compile Include="Common\ChoMetadataObjectCache.cs" />
+    <Compile Include="Common\ChoTextWriterTraceListener.cs" />
+    <Compile Include="Common\ChoTraceSwitch.cs" />
+    <Compile Include="Common\ChoType.cs" />
+    <Compile Include="Common\ChoTypeDescriptor.cs" />
+    <Compile Include="Common\ChoUtility.cs" />
+    <Compile Include="Common\ChoWin32Exception.cs" />
+    <Compile Include="Common\Converters\ChoCurrencyConverter.cs" />
+    <Compile Include="Common\Converters\ChoDateTimeConverter.cs" />
+    <Compile Include="Common\Converters\ChoNumericConverter.cs" />
+    <Compile Include="Common\Converters\ChoSeqNoGeneratorConvertor.cs" />
+    <Compile Include="Common\Converters\ChoUpperCaseConverter.cs" />
+    <Compile Include="Common\Converters\ChoCustomExprConverter.cs" />
+    <Compile Include="Common\Data\ChoEnumerableDataReader.cs" />
+    <Compile Include="Common\Data\ChoObjectDataReader.cs" />
+    <Compile Include="Common\Data\ChoSqlHelper.cs" />
+    <Compile Include="Common\Dynamic\ChoExpandoObjectTypeDescriptionProvider.cs" />
+    <Compile Include="Common\Dynamic\ChoExpandoObjectTypeDescriptor.cs" />
+    <Compile Include="Common\Dynamic\ChoMetadataTypesRegister.cs" />
+    <Compile Include="Common\Dynamic\ChoDynamicQueryable.cs" />
+    <Compile Include="Common\Exceptions\ChoConsoleCtrlException.cs" />
+    <Compile Include="Common\Exceptions\ChoFatalApplicationException.cs" />
+    <Compile Include="Common\ExtensionMethods\ChoDictionaryEx.cs" />
+    <Compile Include="Common\ExtensionMethods\ChoIniFileEx.cs" />
+    <Compile Include="Common\ExtensionMethods\ChoObjectEx.cs" />
+    <Compile Include="Common\ExtensionMethods\ChoStringEx.cs" />
+    <Compile Include="Common\ExtensionMethods\ChoXmlNodeEx.cs" />
+    <Compile Include="Common\IChoInitializable.cs" />
+    <Compile Include="Common\IChoValueConverter.cs" />
+    <Compile Include="Common\RandomGenerator\Attributes\ChoAlphaNumericRandomAttribute.cs" />
+    <Compile Include="Common\RandomGenerator\Attributes\ChoAlphaRandomAttribute.cs" />
+    <Compile Include="Common\RandomGenerator\Attributes\ChoCharRandomAttribute.cs" />
+    <Compile Include="Common\RandomGenerator\Attributes\ChoCurrencyRandomAttribute.cs" />
+    <Compile Include="Common\RandomGenerator\Attributes\ChoDateTimeRandomAttribute.cs" />
+    <Compile Include="Common\RandomGenerator\Attributes\ChoDoubleRandomAttribute.cs" />
+    <Compile Include="Common\RandomGenerator\Attributes\ChoIntRandomAttribute.cs" />
+    <Compile Include="Common\RandomGenerator\Attributes\ChoNumericRandomAttribute.cs" />
+    <Compile Include="Common\RandomGenerator\Attributes\ChoRandomAttribute.cs" />
+    <Compile Include="Common\RandomGenerator\Attributes\ChoStringRandomAttribute.cs" />
+    <Compile Include="Common\RandomGenerator\ChoAlphaNumericRandom.cs" />
+    <Compile Include="Common\RandomGenerator\ChoAlphaRandom.cs" />
+    <Compile Include="Common\RandomGenerator\ChoCharRandom.cs" />
+    <Compile Include="Common\RandomGenerator\ChoCryptoRandom.cs" />
+    <Compile Include="Common\RandomGenerator\ChoCurrencyRandom.cs" />
+    <Compile Include="Common\RandomGenerator\ChoDateTimeRandom.cs" />
+    <Compile Include="Common\RandomGenerator\ChoDoubleRandom.cs" />
+    <Compile Include="Common\RandomGenerator\ChoIntRandom.cs" />
+    <Compile Include="Common\RandomGenerator\ChoNumericRandom.cs" />
+    <Compile Include="Common\RandomGenerator\ChoStringRandom.cs" />
+    <Compile Include="Common\Validators\ChoValidateObjectAttribute.cs" />
+    <Compile Include="Common\Validators\ChoValidator.cs" />
+    <Compile Include="Common\Validators\IChoValidatable.cs" />
+    <Compile Include="ChoRecordObjectAttribute.cs" />
+    <Compile Include="ChoRecordFieldAttribute.cs" />
+    <Compile Include="ETLCommon\ChoETLRecordHelper.cs" />
+    <Compile Include="Exception\ChoMissingRecordFieldException.cs" />
+    <Compile Include="Exception\ChoParserException.cs" />
+    <Compile Include="Exception\ChoReaderException.cs" />
+    <Compile Include="Exception\ChoRecordConfigurationException.cs" />
+    <Compile Include="File\ChoFileRecordConfiguration.cs" />
+    <Compile Include="File\ChoFileHeaderAttribute.cs" />
+    <Compile Include="File\ChoFileRecordFieldConfiguration.cs" />
+    <Compile Include="File\CSV\ChoCSVWriter.cs" />
+    <Compile Include="File\CSV\ChoCSVReader.cs" />
+    <Compile Include="File\CSV\ChoCSVRecordReader.cs" />
+    <Compile Include="File\ChoFileHeaderConfiguration.cs" />
+    <Compile Include="File\CSV\ChoCSVRecordConfiguration.cs" />
+    <Compile Include="File\CSV\ChoCSVRecordFieldConfiguration.cs" />
+    <Compile Include="File\CSV\ChoCSVRecordObjectAttribute.cs" />
+    <Compile Include="File\ChoFileRecordObjectAttribute.cs" />
+    <Compile Include="File\ChoFileRecordFieldAttribute.cs" />
+    <Compile Include="File\CSV\ChoCSVRecordFieldAttribute.cs" />
+    <Compile Include="File\CSV\ChoCSVFileHeaderConfiguration.cs" />
+    <Compile Include="File\CSV\ChoCSVFileHeaderAttribute.cs" />
+    <Compile Include="File\CSV\ChoCSVRecordWriter.cs" />
+    <Compile Include="File\FixedLength\ChoFixedLengthRecordReader.cs" />
+    <Compile Include="File\KeyValue\ChoKVPFileHeaderConfiguration.cs" />
+    <Compile Include="File\KeyValue\ChoKVPRecordFieldAttribute.cs" />
+    <Compile Include="File\KeyValue\ChoKVPRecordObjectAttribute.cs" />
+    <Compile Include="File\KeyValue\ChoKVPRecordFieldConfiguration.cs" />
+    <Compile Include="File\KeyValue\ChoKVPRecordConfiguration.cs" />
+    <Compile Include="File\KeyValue\ChoKVPRecordReader.cs" />
+    <Compile Include="File\KeyValue\ChoKVPReader.cs" />
+    <Compile Include="File\Manifold\ChoRecordTypeCodeAttribute.cs" />
+    <Compile Include="File\ChoRecordTypeConfiguration.cs" />
+    <Compile Include="File\Manifold\ChoManifoldRecordWriter.cs" />
+    <Compile Include="File\Manifold\ChoManifoldWriter.cs" />
+    <Compile Include="File\Manifold\ChoManifoldFileHeaderAttribute.cs" />
+    <Compile Include="File\Manifold\ChoManifoldFileHeaderConfiguration.cs" />
+    <Compile Include="File\FixedLength\ChoFixedLengthRecordObjectAttribute.cs" />
+    <Compile Include="File\FixedLength\ChoFixedLengthRecordFieldAttribute.cs" />
+    <Compile Include="File\FixedLength\ChoFixedLengthRecordFieldConfiguration.cs" />
+    <Compile Include="File\FixedLength\ChoFixedLengthRecordConfiguration.cs" />
+    <Compile Include="File\FixedLength\ChoFixedLengthReader.cs" />
+    <Compile Include="File\Manifold\ChoManifoldRecordReader.cs" />
+    <Compile Include="File\Manifold\ChoManifoldRecordConfiguration.cs" />
+    <Compile Include="File\Manifold\ChoManifoldReader.cs" />
+    <Compile Include="File\Xml\ChoXmlDocumentRootAttribute.cs" />
+    <Compile Include="File\Xml\ChoXmlRecordWriter.cs" />
+    <Compile Include="File\Xml\ChoXmlWriter.cs" />
+    <Compile Include="File\Xml\ChoXmlAttributeRecordFieldAttribute.cs" />
+    <Compile Include="File\Xml\ChoXmlElementRecordFieldAttribute.cs" />
+    <Compile Include="File\Xml\ChoXmlRecordObjectAttribute.cs" />
+    <Compile Include="File\Xml\ChoXmlNodeRecordFieldAttribute.cs" />
+    <Compile Include="File\Xml\ChoXmlRecordFieldConfiguration.cs" />
+    <Compile Include="File\Xml\ChoXmlRecordConfiguration.cs" />
+    <Compile Include="File\Xml\ChoXmlRecordReader.cs" />
+    <Compile Include="File\Xml\ChoXmlReader.cs" />
+    <Compile Include="IChoNotifyRecordWrite.cs" />
+    <Compile Include="IChoNotifyRecordRead.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dependencies.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\Cryptography\" />
+    <Folder Include="Libs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ChoETL.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

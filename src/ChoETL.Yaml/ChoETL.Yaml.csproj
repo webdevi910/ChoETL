@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Cinchoo</Authors>
+    <Company>Cinchoo Inc.</Company>
+    <Description>Yaml extension to Cinchoo ETL framework</Description>
+    <Copyright>Copyright Cinchoo Inc.</Copyright>
+    <PackageLicenseUrl>https://github.com/Cinchoo/ChoETL/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Cinchoo/ChoETL</PackageProjectUrl>
+    <PackageIconUrl></PackageIconUrl>
+    <RepositoryUrl>https://github.com/Cinchoo/ChoETL</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>ETL c# .NET CSV Xml JSON Flat Parquet Yaml</PackageTags>
+    <PackageReleaseNotes>.NET Standard version</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0.35</Version>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>ChoETL.Yaml.snk</AssemblyOriginatorKeyFile>
+    <PackageIcon>cinchoo.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SharpYaml" Version="1.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ChoETL.JSON.NETStandard\ChoETL.JSON.NETStandard.csproj" />
+    <ProjectReference Include="..\ChoETL.NETStandard\ChoETL.NETStandard.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\Assets\Icons\cinchoo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

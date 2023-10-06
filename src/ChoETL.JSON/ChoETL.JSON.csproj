@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF39C858-DA79-4A4B-B0E5-BDF8D8874A15}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChoETL</RootNamespace>
+    <AssemblyName>ChoETL.JSON</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>ChoETL.JSON.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\ChoETL\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChoJObjectLoader.cs" />
+    <Compile Include="ChoJObjectWriter.cs" />
+    <Compile Include="ChoJSONConvertersCache.cs" />
+    <Compile Include="ChoDisableAutoDiscoverabilityAttribute.cs" />
+    <Compile Include="ChoJSONObjects.cs" />
+    <Compile Include="Converters\ChoJSONPathConverter.cs" />
+    <Compile Include="Converters\ChoCompositeObjectConverter.cs" />
+    <Compile Include="Converters\ChoDynamicObjectConverter.cs" />
+    <Compile Include="ChoJSONExtensions.cs" />
+    <Compile Include="ChoJSONPathAttribute.cs" />
+    <Compile Include="ChoPropertyRenameAndIgnoreSerializerContractResolver.cs" />
+    <Compile Include="ChoUseJSONSerializationAttribute.cs" />
+    <Compile Include="ChoJSONRootNameAttribute.cs" />
+    <Compile Include="ChoJSONNodeNameAttribute.cs" />
+    <Compile Include="ChoJSONReader.cs" />
+    <Compile Include="ChoJSONRecordConfiguration.cs" />
+    <Compile Include="ChoJSONRecordFieldConfiguration.cs" />
+    <Compile Include="ChoJSONRecordObjectAttribute.cs" />
+    <Compile Include="ChoJSONRecordFieldAttribute.cs" />
+    <Compile Include="ChoJSONRecordReader.cs" />
+    <Compile Include="ChoJSONRecordWriter.cs" />
+    <Compile Include="ChoJSONWriter.cs" />
+    <Compile Include="ChoJSONRecordConfigurationMap.cs" />
+    <Compile Include="Converters\ByteArrayConverter.cs" />
+    <Compile Include="Converters\ChoJSONTypeConverter.cs" />
+    <Compile Include="Converters\ChoKeyValueModelConverter.cs" />
+    <Compile Include="Converters\ChoKnownTypeConverter.cs" />
+    <Compile Include="Converters\ChoJSONNodeConverter.cs" />
+    <Compile Include="Converters\IChoJSONConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChoETL\ChoETL.csproj">
+      <Project>{0a5062f4-b00a-4998-858d-a3c5d99e2074}</Project>
+      <Name>ChoETL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ChoETL.JSON.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

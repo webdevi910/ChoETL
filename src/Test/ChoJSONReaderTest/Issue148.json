@@ -1,0 +1,41 @@
+﻿[
+  {
+    "@odata.etag": "",
+    "ItemInternalId": "16c1b4cb-dbd5-4fcb-96e2-0fb6f3ac49db",
+    "SyncJobId": 363,
+    "ExternalJobIdentifier": "7500n000007X8CsAAK",
+    "Status": "UploadComplete",
+    "ErrorMessage": "InvalidBatch : InvalidBatch : Field name not found : MMC_MaretingEmailAddress__c",
+    "Operation": "upsert",
+    "Entity": "ExportSCCompany",
+    "RecordCount": 0,
+    "Processed": 0,
+    "Errored": 0,
+    "Queued": 0,
+    "SyncType": "S",
+    "FilelogId": 168960,
+    "Inserted": "2021-07-19T14:40:42.977Z",
+    "Updated": "2021-07-19T14:40:42.977Z",
+    "InsertedBy": "BBAKER-XPSTOWER-MMCGROUP\\bbaker",
+    "UpdatedBy": "BBAKER-XPSTOWER-MMCGROUP\\bbaker",
+    "EditCount": 1
+  },
+  {
+    "@odata.etag": "",
+    "ItemInternalId": "a3cc4aaf-d4a3-4838-8205-7f2de6a8bad0",
+    "SyncJobId": 372,
+    "Status": "UploadComplete",
+    "Entity": "ExportSCMergedCompany",
+    "RecordCount": 0,
+    "Processed": 0,
+    "Errored": 0,
+    "Queued": 0,
+    "SyncType": "S",
+    "FilelogId": 169181,
+    "Inserted": "2021-07-21T11:19:55.647Z",
+    "Updated": "2021-07-21T11:19:55.647Z",
+    "InsertedBy": "BBAKER-XPSTOWER-MMCGROUP\\bbaker",
+    "UpdatedBy": "BBAKER-XPSTOWER-MMCGROUP\\bbaker",
+    "EditCount": 1
+  }
+]

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\ChoETL\packages\NUnit3TestAdapter.3.15.1\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\..\ChoETL\packages\NUnit3TestAdapter.3.15.1\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\..\ChoETL\packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('..\..\ChoETL\packages\NUnit.3.12.0\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F9560FC0-5DAD-4F59-8BA1-46E3D7B183CF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChoJSONReaderTest</RootNamespace>
+    <AssemblyName>ChoJSONReaderTest</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="KellermanSoftware.Compare-NET-Objects, Version=4.79.0.0, Culture=neutral, PublicKeyToken=d970ace04cc85217, processorArchitecture=MSIL">
+      <HintPath>..\..\ChoETL\packages\CompareNETObjects.4.79.0\lib\net452\KellermanSoftware.Compare-NET-Objects.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\ChoETL\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\..\ChoETL\packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Tests\DeserializeToConcreteClassesUsingDiscriminatorAndKnownTypesTests.cs" />
+    <Compile Include="Tests\DeserializeToConcreteClassesUsingConverterTests.cs" />
+    <Compile Include="Tests\DeserializeToConcreteClassesUsingRecordTypeSelectorTests.cs" />
+    <Compile Include="Tests\DeserializeToConcreteClassesUsingDiscriminatorAttributeTests.cs" />
+    <Compile Include="Tests\MixedTests.cs" />
+    <Content Include="companies.xml" />
+    <Content Include="sample3Expected.xml" />
+    <None Include="companies.json" />
+    <None Include="companies.csv" />
+    <None Include="Issue147.json" />
+    <None Include="Issue148a.json" />
+    <None Include="Issue148.json" />
+    <None Include="Issue152.json" />
+    <None Include="Issue151.json" />
+    <None Include="Movie.json" />
+    <None Include="klant.json" />
+    <None Include="packages.config" />
+    <None Include="sample16_1.json" />
+    <None Include="sample230.json" />
+    <None Include="sample100.json" />
+    <None Include="Sample16Expected.csv" />
+    <None Include="Sample18Expected.csv" />
+    <None Include="Sample2Expected.csv" />
+    <None Include="sample32Expected.csv" />
+    <None Include="sample48.json" />
+    <None Include="sample4Expected.csv" />
+    <None Include="sample58.json" />
+    <None Include="sample57.json" />
+    <None Include="sample56.json" />
+    <None Include="sample55.json" />
+    <None Include="sample54.json" />
+    <None Include="sample53.json" />
+    <None Include="sample52.json" />
+    <None Include="sample51.json" />
+    <None Include="sample50.json" />
+    <None Include="sample49.json" />
+    <None Include="sample47.json" />
+    <None Include="sample39.json" />
+    <None Include="sample38.json" />
+    <None Include="sample37.json" />
+    <None Include="sample36.json" />
+    <None Include="sample35.json" />
+    <None Include="sample34.json" />
+    <None Include="sample33.json" />
+    <None Include="sample32.json" />
+    <None Include="sample31.json" />
+    <None Include="sample30.json" />
+    <None Include="sample29.json" />
+    <None Include="sample28.json" />
+    <None Include="sample27.json" />
+    <None Include="sample26.json" />
+    <None Include="sample25.json" />
+    <None Include="sample24.json" />
+    <None Include="sample23.json" />
+    <None Include="sample22.json" />
+    <None Include="sample21.json" />
+    <None Include="sample20.json" />
+    <None Include="sample33Expected.csv" />
+    <None Include="sample46.json" />
+    <None Include="sample45.json" />
+    <None Include="sample44.json" />
+    <None Include="sample43.json" />
+    <None Include="sample42.json" />
+    <None Include="sample41.json" />
+    <None Include="sample141.json" />
+    <None Include="Sensors.json" />
+    <None Include="sf_city_lots.json" />
+    <None Include="smallsubset1.json" />
+    <None Include="TestData2.json" />
+    <None Include="TestData1.json" />
+    <None Include="TestData.json" />
+    <None Include="Colors.json" />
+    <None Include="sample19.json" />
+    <None Include="sample18.json" />
+    <None Include="sample17.json" />
+    <None Include="sample16.json" />
+    <None Include="sample15.json" />
+    <None Include="sample14.json" />
+    <None Include="sample13.json" />
+    <None Include="sample12.json" />
+    <None Include="sample11.json" />
+    <None Include="sample10.json" />
+    <None Include="sample9.json" />
+    <None Include="sample8.json" />
+    <None Include="sample7.json" />
+    <None Include="sample6.json" />
+    <None Include="sample5.json" />
+    <None Include="sample3.csv" />
+    <None Include="sample4.json" />
+    <None Include="sample3.json" />
+    <None Include="sample2.json" />
+    <None Include="sample1.json" />
+    <None Include="Emp.json" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="XBTUSD.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ChoETL.JSON\ChoETL.JSON.csproj">
+      <Project>{ff39c858-da79-4a4b-b0e5-bdf8d8874a15}</Project>
+      <Name>ChoETL.JSON</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ChoETL\ChoETL.csproj">
+      <Project>{0a5062f4-b00a-4998-858d-a3c5d99e2074}</Project>
+      <Name>ChoETL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UnitTestHelper\UnitTestHelper.csproj">
+      <Project>{cab2dd15-85e2-494b-943c-47e8adade340}</Project>
+      <Name>UnitTestHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>COPY $(ProjectDir)*.json $(TargetDir)
+COPY $(ProjectDir)*.csv $(TargetDir)
+COPY $(ProjectDir)*.xml $(TargetDir)</PostBuildEvent>
+  </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\ChoETL\packages\NUnit.3.12.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\ChoETL\packages\NUnit.3.12.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\..\ChoETL\packages\NUnit3TestAdapter.3.15.1\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\ChoETL\packages\NUnit3TestAdapter.3.15.1\build\net35\NUnit3TestAdapter.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,48 @@
+﻿<div class="section_content">
+  <div>
+    <table class="table table-bordered table-condensed table-striped" cellspacing="0" id="gv_report">
+      <thead>
+        <tr>
+          <th scope="col">Lot</th>
+          <th scope="col">Op</th>
+          <th scope="col">Status</th>
+          <th scope="col">iDispo Status</th>
+          <th scope="col">Dispo By</th>
+          <th scope="col">Dispo Date</th>
+          <th scope="col">T.R Count</th>
+          <th scope="col">View</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>7649B703</td>
+          <td>6262</td>
+          <td>FAIL</td>
+          <td>FAIL</td>
+          <td>mly2</td>
+          <td>12/10/2016 4:30:47 PM</td>
+          <td>1</td>
+          <td>
+            <a href="/SS_PROD/Report/LotDispoHistSummRepPopUp.aspx?Lot=7649B703&amp;Location=6262" target="_blank">
+              <i class="icon-eye-open"></i>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>7649B703</td>
+          <td>6262</td>
+          <td>FAIL</td>
+          <td>FAIL</td>
+          <td>mly2</td>
+          <td>12/10/2016 4:30:47 PM</td>
+          <td>1</td>
+          <td>
+            <a href="/SS_PROD/Report/LotDispoHistSummRepPopUp.aspx?Lot=7649B703&amp;Location=6262" target="_blank">
+              <i class="icon-eye-open"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

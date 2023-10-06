@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Cinchoo</Authors>
+    <Company>Cinchoo Inc.</Company>
+    <Description>AVRO extension to Cinchoo ETL framework</Description>
+    <Copyright>Copyright Cinchoo Inc.</Copyright>
+    <PackageLicenseUrl>https://github.com/Cinchoo/ChoETL/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Cinchoo/ChoETL</PackageProjectUrl>
+    <PackageIconUrl></PackageIconUrl>
+    <RepositoryUrl>https://github.com/Cinchoo/ChoETL</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>ETL c# .NET CSV Xml JSON Flat Avro</PackageTags>
+    <PackageReleaseNotes>.NET Neutral version</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0.17</Version>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>ChoETL.Avro.snk</AssemblyOriginatorKeyFile>
+    <PackageIcon>cinchoo.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Avro.Core" Version="0.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ChoETL.NETStandard\ChoETL.NETStandard.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\Assets\Icons\cinchoo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

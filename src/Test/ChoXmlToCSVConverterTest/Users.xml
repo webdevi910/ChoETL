@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<users>
+	<user id="1">
+		<first_name>George</first_name> 
+		<last_name>Washington</last_name> 
+	</user>
+	<user id="2">
+		<first_name>Abraham</first_name> 
+		<last_name>Lincoln</last_name> 
+	</user>
+</users>

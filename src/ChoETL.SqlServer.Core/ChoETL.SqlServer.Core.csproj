@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>ChoETL</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Cinchoo</Authors>
+    <Company>Cinchoo Inc.</Company>
+    <Description>SqlServer extension to Cinchoo ETL framework</Description>
+    <Copyright>Copyright Cinchoo Inc.</Copyright>
+    <PackageProjectUrl>https://github.com/Cinchoo/ChoETL</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Cinchoo/ChoETL</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>ETL c# .NET CSV Xml JSON Flat Parquet Yaml</PackageTags>
+    <PackageReleaseNotes>.NET Standard version</PackageReleaseNotes>
+    <PackageIconUrl></PackageIconUrl>
+    <Version>1.0.0.3</Version>
+    <PackageIcon>cinchoo.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\ChoETL.SqlServer\ChoETLSqlServer.cs" Link="ChoETLSqlServer.cs" />
+    <Compile Include="..\ChoETL.SqlServer\ChoETLSqlServerConfiguration.cs" Link="ChoETLSqlServerConfiguration.cs" />
+    <Compile Include="..\ChoETL.SqlServer\ChoETLSqlServerSettings.cs" Link="ChoETLSqlServerSettings.cs" />
+    <Compile Include="..\ChoETL.SqlServer\ChoETLSSqlServerDbContext.cs" Link="ChoETLSSqlServerDbContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ChoETL.NETStandard\ChoETL.NETStandard.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\Assets\Icons\cinchoo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

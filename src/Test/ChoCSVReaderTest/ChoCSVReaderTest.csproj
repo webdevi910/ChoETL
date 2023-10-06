@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\ChoETL\packages\NUnit3TestAdapter.3.15.1\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\..\ChoETL\packages\NUnit3TestAdapter.3.15.1\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\..\ChoETL\packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('..\..\ChoETL\packages\NUnit.3.12.0\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D732199D-680F-4571-96ED-8E00E34580AA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChoCSVReaderTest</RootNamespace>
+    <AssemblyName>ChoCSVReaderTest</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\ChoETL\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\..\ChoETL\packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Test\BaseTests.cs" />
+    <Compile Include="Test\Issues.cs" />
+    <Compile Include="Vector3.cs" />
+    <None Include="020180412_045106Cropped.csv" />
+    <None Include="QuotedValuesWithEOLInside.csv" />
+    <None Include="QuotedValues.csv" />
+    <None Include="Empty.csv" />
+    <None Include="InterfaceTest.csv" />
+    <None Include="EmptyLines.csv" />
+    <None Include="CurrencyQuotes.csv" />
+    <None Include="CustomNewLine.csv" />
+    <None Include="EmpDuplicates.csv" />
+    <None Include="EmpQuoteInQuote.csv" />
+    <None Include="IgnoreLineFile1.csv" />
+    <None Include="Issue43.csv" />
+    <None Include="MasterDetail.csv" />
+    <None Include="packages.config" />
+    <None Include="planets.csv" />
+    <None Include="pontos.csv" />
+    <None Include="DoubleQuotesTest.csv" />
+    <None Include="Sample8.csv" />
+    <None Include="Sample7.csv" />
+    <None Include="Sample6.csv" />
+    <None Include="Sample5.csv" />
+    <None Include="Sample3.csv" />
+    <None Include="Sample2.csv" />
+    <None Include="Sample1.csv" />
+    <None Include="Players.csv" />
+    <None Include="MergeInput.csv" />
+    <None Include="Emp1.csv" />
+    <None Include="EmpWithSalary.csv" />
+    <None Include="IgnoreLineFile.csv" />
+    <None Include="MultiLineValue.csv" />
+    <None Include="Emp.csv" />
+    <None Include="Account.csv" />
+    <None Include="EmpQuote.csv" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="NodeData.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dict1.csv" />
+    <None Include="Nested.csv" />
+    <None Include="NestedQuotes.csv" />
+    <None Include="QuoteEscape.csv" />
+    <None Include="SampleData.csv" />
+    <None Include="SolarTemp.csv" />
+    <None Include="ZipCodes.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BadFile.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ChoETL.JSON\ChoETL.JSON.csproj">
+      <Project>{ff39c858-da79-4a4b-b0e5-bdf8d8874a15}</Project>
+      <Name>ChoETL.JSON</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ChoETL\ChoETL.csproj">
+      <Project>{0a5062f4-b00a-4998-858d-a3c5d99e2074}</Project>
+      <Name>ChoETL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UnitTestHelper\UnitTestHelper.csproj">
+      <Project>{cab2dd15-85e2-494b-943c-47e8adade340}</Project>
+      <Name>UnitTestHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>@COPY $(ProjectDir)*.csv $(TargetDir)</PostBuildEvent>
+  </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\ChoETL\packages\NUnit.3.12.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\ChoETL\packages\NUnit.3.12.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\..\ChoETL\packages\NUnit3TestAdapter.3.15.1\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\ChoETL\packages\NUnit3TestAdapter.3.15.1\build\net35\NUnit3TestAdapter.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
